@@ -1,0 +1,32 @@
+<html>
+<body>
+
+<h1>This is a website on skiing</h1>
+<h2>Why is skiing so cool? Find it out on this page!</h2>
+
+<p>Skiing is great sport!</p>
+<h4>Below is a picture of a skier:</h4>
+<img src="{{url_for('static', filename='ski.png')}}" alt="the picture will be added shortly">
+
+<h4>If you are interested in the next skiing camp, register below:</h4>
+<form action="/registertocamp" method="post">
+    <label for="namefield">Name:</label>
+    <input type="text" id="namefield" name="name">
+    <label for="agefield">Age:</label>
+    <input type="number" id="agefield" name="age">
+    <label for="emailfield">E-mail:</label>
+    <input type="text" id="emailfield" name="email">
+    <input type="submit" value="Register">
+</form>
+
+<h4>Use this calculator to compute your ideal ski size:</h4>
+<form action="/calculateskisize" method="post">
+    <label for="heightfield">Your height (in centimeters):</label>
+    <input type="number" id="heightfield" name="height">
+    <label for="skillfield">Your skill level (1 = beginner, 2 = intermediate, 3 = expert):</label>
+    <input type="number" id="skillfield" name="skill">
+    <input type="submit" value="Calculate">
+</form>
+
+</body>
+</html>
